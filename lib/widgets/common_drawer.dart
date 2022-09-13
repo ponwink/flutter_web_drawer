@@ -1,23 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CommonDrawer {
-  // ドロワー（デフォルト）
-  Drawer drawerDefault() {
+/// ドロワー
+class CommonDrawer extends StatelessWidget {
+  const CommonDrawer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [
+        children: const [
           DrawerHeader(
             child: Text("ヘッダー"),
           ),
           ListTile(
-            title: Text("ページ１")
+            title: Text("ページ１"),
           ),
           ListTile(
-            title: Text("ページ２")
+            title: Text("ページ２"),
           ),
           ListTile(
-            title: Text("ページ３")
+            title: Text("ページ３"),
           ),
         ],
       ),
